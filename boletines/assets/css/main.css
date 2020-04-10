@@ -29,20 +29,30 @@ a:hover{
     justify-content: center;
 }
 .content{
-    max-width: 960px;
-    max-height: 500px;
-    width: 100%;
-    height: 100%;
+    max-width: 920px;
+    width: 85%;
+    height: 80vh;
     background-color: #f6f7eb;
     /*box-shadow: diferenciaHorizontal diferencia Vertical desenfoque amplitud colorSombra */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 10px;
     position: relative;
-    padding: 1.8em;
+    overflow: scroll;
 }
-.paragraph{
-    line-height: 1.8em;
-    font-weight: 300;
+.content{
+    padding: 1em;
+}
+td{
+    display: block;
+    width: 100%;
+}
+td:nth-of-type(1){
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #44bba4;
+}
+th{
+    display: none;
 }
 .table{
     width: 100%;
@@ -71,6 +81,12 @@ a:hover{
     font-weight: bold;
     color: #3f88c5;
     font-size: 1.2em;
+    margin-top: 2em;
+    display: inline-block;
+}
+.paragraph{
+    line-height: 1.8em;
+    font-weight: 300;
 }
 .main-image{
     float: left;
@@ -80,9 +96,10 @@ a:hover{
 .position{
     background-color: #44bba4;
     color: #f6f7eb;
-    padding: 10px;
+    padding: 0.5em;
     border-radius: 4px;
     margin-right: 0.5em;
+    float: left;
 }
 .actions{
     position: absolute;
@@ -102,4 +119,36 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+img{
+    max-width: 100%;
+}
+@media (min-width: 900px){
+    td{
+        width: auto;
+        display: table-cell;
+    }
+    td:nth-of-type(1){
+        font-size: 1em;
+        font-weight: normal;
+        color: black;
+    }
+    th{
+        display: table-cell;
+    }
+    .content{
+        padding: 1.8em;
+        overflow: unset;
+    }
+    .position{
+        float: none;
+    }
+    .address{
+        display: inline;
+    }
+}
+@media (min-height: 550px){
+    .content{
+        height: 500px;
+    }
 }
