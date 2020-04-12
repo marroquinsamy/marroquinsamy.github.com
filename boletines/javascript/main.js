@@ -14,7 +14,7 @@ links.forEach(function(link){
         content.classList.add("bounceOut");
         content.classList.add("animated"); // Lo quito y lo vuelvo a poner para que repita el proceso de animación
         setTimeout(function(){
-            location.href = "/";
+            location.href = "/boletines";
         }, 650);
     });
 });
